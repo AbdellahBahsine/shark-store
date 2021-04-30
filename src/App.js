@@ -4,8 +4,8 @@ import './App.css';
 import {Switch, Route, Link} from 'react-router-dom';
 
 import Header from './components/header/header.component';
-import Hero from './components/hero/hero.component';
-import ProductsList from './components/products-list/products-list.component';
+import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './pages/shop/shop.component';
 import Footer from './components/footer/footer.component';
 
 const App = () => {
@@ -13,8 +13,8 @@ const App = () => {
     <div className="app">
       <Header />
       <main>
-        <Hero />
-        <ProductsList />
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/shop' component={ShopPage} />
       </main>
       <Footer />
     </div>
