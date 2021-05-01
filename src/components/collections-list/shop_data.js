@@ -7,7 +7,7 @@ const SHOP_DATA = [
         {
           id: 1,
           name: 'Black Spaghetti Strap',
-          imageUrl: 'https://i.ibb.co/kHzkcmB/black-spaghetti-strap.jpg',
+          imageUrl: 'https://i.imgur.com/k96LsqT.jpeg',
           price: 20
         },
         {
@@ -25,7 +25,7 @@ const SHOP_DATA = [
         {
           id: 4,
           name: 'Gray Spaghetti Strap',
-          imageUrl: 'https://i.ibb.co/BsNHdcx/spaghetti-strap.jpg',
+          imageUrl: 'https://i.imgur.com/Jxm3nC7.jpeg',
           price: 20
         }
       ]
@@ -56,7 +56,7 @@ const SHOP_DATA = [
         {
           id: 8,
           name: 'Red Suit Jacket',
-          imageUrl: 'https://i.ibb.co/9ZR8sFz/red-suit-jacket.jpg',
+          imageUrl: 'https://i.imgur.com/YKLAFAm.jpeg',
           price: 15
         }
       ]
@@ -75,13 +75,13 @@ const SHOP_DATA = [
         {
           id: 10,
           name: 'Gray Nike Basketball',
-          imageUrl: 'https://i.ibb.co/Lv8k1c2/gray-nike-basketball.jpg',
+          imageUrl: 'https://i.imgur.com/g8injlA.jpeg',
           price: 90
         },
         {
           id: 11,
           name: 'Nike Air Max',
-          imageUrl: 'https://i.ibb.co/xMnjtNF/nike-air-max.jpg',
+          imageUrl: 'https://i.imgur.com/yPPEmaI.jpg',
           price: 90
         },
         {

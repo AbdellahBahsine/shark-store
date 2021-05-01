@@ -1,19 +1,20 @@
 import React from 'react';
-import { HeaderContainer, LogoContainer, Link, CartContainer, Cart } from './header.styles';
+import { HeaderContainer, LogoContainer, Anchor, CartContainer, Cart } from './header.styles';
+ 
+const Header = ({cartItems}) => {
 
-const Header = () => {
     return (
         <HeaderContainer>
             <LogoContainer>Shark Store</LogoContainer>
             <nav>
-                <Link href="#">Home</Link>
-                <Link href="#">Shop</Link>
-                <Link href="#">Sign In</Link>
-                <Link href="#">Sign Up</Link>
+                <Anchor to="/">Home</Anchor>
+                <Anchor to="/shop">Shop</Anchor>
+                <Anchor href="#">Sign In</Anchor>
+                <Anchor href="#">Sign Up</Anchor>
             </nav>
             <CartContainer>
                 <Cart className="fas fa-shopping-cart"></Cart>
-                Cart | 0 items
+                Cart | {cartItems.length} items
             </CartContainer>
         </HeaderContainer>
     )

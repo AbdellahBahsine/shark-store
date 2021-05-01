@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 export const HeaderContainer = styled.header`
     height: 65px;
@@ -13,7 +14,7 @@ export const LogoContainer = styled.h2`
     color: #fff;
 `;
  
-export const Link = styled.a`
+export const Anchor = styled(Link)`
     margin: 0 15px;
     color: #fff;
     text-decoration: none;

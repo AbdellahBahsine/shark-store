@@ -2,10 +2,10 @@ import {ShopContainer} from './shop.styles';
 
 import CollectionsList from '../../components/collections-list/collections-list.component';
 
-const ShopPage = () => {
+const ShopPage = ({cartItems, handleClick}) => {
     return (
         <ShopContainer>
-            <CollectionsList />
+            <CollectionsList cartItems={cartItems} handleClick={handleClick} />
         </ShopContainer>
     )
 }
