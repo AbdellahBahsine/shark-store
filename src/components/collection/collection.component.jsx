@@ -11,7 +11,7 @@ const Collection = ({items, title, cartItems, handleClick}) => {
             )
         }
 
-        return [...cartItems, {newCartItem, quantity: 1}]
+        return [...cartItems, {...newCartItem, quantity: 1}]
     }
 
     return (
