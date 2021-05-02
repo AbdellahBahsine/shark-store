@@ -1,43 +1,45 @@
 import {ProductContainer, Card, ImageContainer, Image, CardTitle, CardText, AddToCart} from './product.styles';
 
+import SHOP_DATA from '../collections-list/shop_data';
+
 const Product = () => {
     return (
         <ProductContainer>
             <Card>
                 <ImageContainer><Image></Image></ImageContainer>
-                <CardTitle>Brown Suit Jacket</CardTitle>
-                <CardText>$20</CardText>
+                <CardTitle>{SHOP_DATA[0].items[0].name}</CardTitle>
+                <CardText>${SHOP_DATA[0].items[0].price}</CardText>
                 <AddToCart><i className="fas fa-shopping-cart"></i></AddToCart>
             </Card>
             <Card>
                 <ImageContainer><Image></Image></ImageContainer>
-                <CardTitle>Long Sleeve Dress</CardTitle>
-                <CardText>$25</CardText>
+                <CardTitle>{SHOP_DATA[0].items[2].name}</CardTitle>
+                <CardText>${SHOP_DATA[0].items[2].price}</CardText>
                 <AddToCart><i className="fas fa-shopping-cart"></i></AddToCart>
             </Card>
             <Card>
                 <ImageContainer><Image></Image></ImageContainer>
-                <CardTitle>Floral Spaghetti Strap</CardTitle>
-                <CardText>$15</CardText>
+                <CardTitle>{SHOP_DATA[0].items[1].name}</CardTitle>
+                <CardText>${SHOP_DATA[0].items[1].price}</CardText>
                 <AddToCart><i className="fas fa-shopping-cart"></i></AddToCart>
             </Card>
 
             <Card>
                 <ImageContainer><Image></Image></ImageContainer>
-                <CardTitle>White Nike</CardTitle>
-                <CardText>$165</CardText>
+                <CardTitle>{SHOP_DATA[2].items[3].name}</CardTitle>
+                <CardText>${SHOP_DATA[2].items[3].price}</CardText>
                 <AddToCart><i className="fas fa-shopping-cart"></i></AddToCart>
             </Card>
             <Card>
                 <ImageContainer><Image></Image></ImageContainer>
-                <CardTitle>Brown Suit Jacket</CardTitle>
-                <CardText>$20</CardText>
+                <CardTitle>{SHOP_DATA[1].items[0].name}</CardTitle>
+                <CardText>${SHOP_DATA[1].items[0].price}</CardText>
                 <AddToCart><i className="fas fa-shopping-cart"></i></AddToCart>
             </Card>
             <Card>
                 <ImageContainer><Image></Image></ImageContainer>
-                <CardTitle>Red/White Air Jordan</CardTitle>
-                <CardText>$100</CardText>
+                <CardTitle>{SHOP_DATA[2].items[0].name}</CardTitle>
+                <CardText>${SHOP_DATA[2].items[0].price}</CardText>
                 <AddToCart><i className="fas fa-shopping-cart"></i></AddToCart>
             </Card>
         </ProductContainer>
