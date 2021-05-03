@@ -6,31 +6,6 @@ export const ProductContainer = styled.div`
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 60px;
     margin: 40px 0;
-
-    div:nth-child(1) div:nth-child(1){
-        background-image: url(https://i.ibb.co/t3p958r/brown-suit-jacket.jpg);
-    }
-
-    div:nth-child(2) div:nth-child(1){
-        background-image: url(https://i.ibb.co/myC2WyS/long-sleeve.jpg);
-        background-position: top center;
-    }
-
-    div:nth-child(3) div:nth-child(1){
-        background-image: url(https://i.ibb.co/nsVCcwN/floral-spaghetti-strap.jpg);
-    }
-
-    div:nth-child(4) div:nth-child(1){
-        background-image: url(https://i.ibb.co/BjbzJJT/white-nike.jpg);
-    }
-
-    div:nth-child(5) div:nth-child(1){
-        background-image: url(https://i.ibb.co/gFjJxyj/denim-jacket.jpg);
-    }
-
-    div:nth-child(6) div:nth-child(1){
-        background-image: url(https://i.ibb.co/RPH5C5J/air-jordan.jpg);
-    }
 `;
 
 export const Card = styled.div`
@@ -51,6 +26,7 @@ export const Image = styled.div`
     background-size: cover;
     background-position: center;
     border-radius: 5px 5px 0 0;
+    background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 
     &:hover{
         transform: scale(1.1);

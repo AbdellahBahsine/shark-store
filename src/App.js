@@ -22,13 +22,25 @@ const App = () => {
     setIsActive(!isActive)
 }
 
+const addItemToCart = (cartItems, newCartItem) => {
+  const existingCartItem = cartItems.find(item => item.id === newCartItem.id)
+
+  if(existingCartItem){
+      return cartItems.map(item => 
+          item.id === newCartItem.id ? {...item, quantity: item.quantity + 1} : item
+      )
+  }
+
+  return [...cartItems, {...newCartItem, quantity: 1}]
+}
+
   return (
     <div className={isActive ? "app move" : "app"}>
       <Header cartItems={cartItems} toggleActive={toggleActive} />
       <CartList cartItems={cartItems} isActive={isActive}></CartList>
       <main>
-        <Route exact path='/' render={(props) => (<HomePage  />)} />
-        <Route exact path='/shop' render={(props) => (<ShopPage cartItems={cartItems} handleClick={handleClick} />)} />
+        <Route exact path='/' render={(props) => (<HomePage cartItems={cartItems} handleClick={handleClick} addItemToCart={addItemToCart} />)} />
+        <Route exact path='/shop' render={(props) => (<ShopPage cartItems={cartItems} handleClick={handleClick} addItemToCart={addItemToCart} />)} />
       </main>
       <Footer />
     </div>

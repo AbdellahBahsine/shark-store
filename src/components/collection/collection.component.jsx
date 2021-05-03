@@ -1,18 +1,6 @@
 import {Cards, Card, ImageContainer, Image, CardTitle, CardText, AddToCart} from './collection.styles';
 
-const Collection = ({items, title, cartItems, handleClick}) => {
-
-    const addItemToCart = (cartItems, newCartItem) => {
-        const existingCartItem = cartItems.find(item => item.id === newCartItem.id)
-
-        if(existingCartItem){
-            return cartItems.map(item => 
-                item.id === newCartItem.id ? {...item, quantity: item.quantity + 1} : item
-            )
-        }
-
-        return [...cartItems, {...newCartItem, quantity: 1}]
-    }
+const Collection = ({items, title, cartItems, handleClick, addItemToCart}) => {
 
     return (
         <div className="collection">
