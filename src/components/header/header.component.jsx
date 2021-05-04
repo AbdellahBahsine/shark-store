@@ -2,8 +2,10 @@ import React, {useState} from 'react';
 import { HeaderContainer, LogoContainer, Anchor, CartContainer, Cart } from './header.styles';
 
 import CartList from '../cart-list/cart-list.component';
+
+import {auth} from '../../firebase/firebase';
  
-const Header = ({cartItems, toggleActive}) => {
+const Header = ({currentUser, cartItems, toggleActive}) => {
 
     return (
         <div>
@@ -12,8 +14,11 @@ const Header = ({cartItems, toggleActive}) => {
                 <nav>
                     <Anchor to="/">Home</Anchor>
                     <Anchor to="/shop">Shop</Anchor>
-                    <Anchor href="#">Sign In</Anchor>
-                    <Anchor href="#">Sign Up</Anchor>
+                    {
+                        currentUser ?
+                        (<div onClick={() => auth.signOut()}>Sign Out</div>) :
+                        <div>Lol</div>
+                    }
                 </nav>
                 <CartContainer>
                     <Cart className="fas fa-shopping-cart" onClick={() => toggleActive()}></Cart>

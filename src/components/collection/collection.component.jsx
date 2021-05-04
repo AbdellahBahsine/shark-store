@@ -17,7 +17,7 @@ const Collection = ({items, title, cartItems, handleClick, addItemToCart}) => {
                     )
                 })}
             </Cards>
-        </div>
+        </div> 
     )
 }
 
