@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 
-import {Switch, Route, Link} from 'react-router-dom';
+import {Route, Redirect } from 'react-router-dom';
 
 import Header from './components/header/header.component';
 import CartList from './components/cart-list/cart-list.component';
@@ -70,8 +70,8 @@ const addItemToCart = (cartItems, newCartItem) => {
       <main>
         <Route exact path='/' render={(props) => (<HomePage cartItems={cartItems} handleClick={handleClick} addItemToCart={addItemToCart} />)} />
         <Route exact path='/shop' render={(props) => (<ShopPage cartItems={cartItems} handleClick={handleClick} addItemToCart={addItemToCart} />)} />
-        <Route exact path='/sign-up' component={SignUp} />
-        <Route exact path='/sign-in' component={SignIn} />
+        <Route exact path='/sign-up' render={() => currentUser ? <Redirect to='/' /> : <SignUp /> } />
+        <Route exact path='/sign-in' render={() => currentUser ? <Redirect to='/' /> : <SignIn /> } />
       </main>
       <Footer />
     </div>

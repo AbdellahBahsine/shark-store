@@ -35,7 +35,7 @@ const SignIn = () => {
     return(
         <SignInContainer>
             <h2>Sign In</h2>
-            <Form action="">
+            <Form action="" onSubmit={handleSubmit}>
                 <Input type="text" name="username" placeholder="Enter your email..." value={username} onChange={handleChange} />
                 <Input type="password" name="password" placeholder="Enter your password..." value={password} onChange={handleChange} />
                 <Button>Log In</Button>

@@ -10,14 +10,17 @@ const Header = ({currentUser, cartItems, toggleActive}) => {
     return (
         <div>
             <HeaderContainer>
-                <LogoContainer>Shark Store</LogoContainer>
+                <LogoContainer>Shark <span>Store</span></LogoContainer>
                 <nav>
                     <Anchor to="/">Home</Anchor>
                     <Anchor to="/shop">Shop</Anchor>
                     {
                         currentUser ?
-                        (<div onClick={() => auth.signOut()}>Sign Out</div>) :
-                        <div>Lol</div>
+                        (<Anchor onClick={() => auth.signOut()}>Sign Out</Anchor>) :
+                        <span>
+                            <Anchor to="/sign-in">Sign In</Anchor>
+                            <Anchor to="/sign-up">Sign up</Anchor>
+                        </span>
                     }
                 </nav>
                 <CartContainer>

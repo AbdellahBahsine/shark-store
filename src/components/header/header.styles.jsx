@@ -7,11 +7,18 @@ export const HeaderContainer = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3E4756;
+    background-color: #006D75;
 `;
 
 export const LogoContainer = styled.h2`
     color: #fff;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+
+    span{
+        color: #94B0B3;
+    }
 `;
  
 export const Anchor = styled(Link)`
@@ -19,6 +26,11 @@ export const Anchor = styled(Link)`
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+
+    &:hover{
+        color: #94B0B3;
+        transition: 0.6s;
+    }
 `;
 
 export const CartContainer = styled.div`
@@ -30,4 +42,5 @@ export const Cart = styled.i`
     border-radius: 50%;
     padding: 6px;
     margin-right: 8px;
+    cursor: pointer;
 `;

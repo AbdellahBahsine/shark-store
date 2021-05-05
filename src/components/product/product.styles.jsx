@@ -11,7 +11,9 @@ export const ProductContainer = styled.div`
 export const Card = styled.div`
     position: relative;
     flex: 1;
-    height: 400px;
+    height: 520px;
+    border: 2px solid #006D75;
+    padding: 15px;
 `;
 
 export const ImageContainer = styled.div`
@@ -25,36 +27,48 @@ export const Image = styled.div`
     width: 100%;
     background-size: cover;
     background-position: center;
-    border-radius: 5px 5px 0 0;
     background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+`;
 
-    &:hover{
-        transform: scale(1.1);
-        transition: 2s;
-    }
+export const ContentContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const CardTitle = styled.h3`
-    margin: 14px 0 6px 0;
     font-weight: 600;
 `;
 
 export const CardText = styled.p`
-    margin: 6px 0;
     font-weight: 200;
+`;
+
+export const Button = styled.button`
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #006D75;
+    color: #006D75;
+    cursor: pointer;
 `;
 
 export const AddToCart = styled.div`
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 26px;
+    right: 26px;
     width: 46px;
     height: 46px;
-    background-color: #3E4756;
+    background-color: #006D75;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     cursor: pointer;
+
+    &:hover{
+        opacity: .8;
+        transition: 0.6s;
+    }
 `;
