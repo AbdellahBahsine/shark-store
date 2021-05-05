@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {SignInContainer, Form, Input, Button} from './sign-in.styles';
+import {FormContainer, SignInContainer, SignInIconContainer, SignInIcon, Title, Form, Input, Button} from './sign-in.styles';
 
 import {auth} from '../../firebase/firebase';
 
@@ -33,14 +33,17 @@ const SignIn = () => {
     }
 
     return(
-        <SignInContainer>
-            <h2>Sign In</h2>
-            <Form action="" onSubmit={handleSubmit}>
-                <Input type="text" name="username" placeholder="Enter your email..." value={username} onChange={handleChange} />
-                <Input type="password" name="password" placeholder="Enter your password..." value={password} onChange={handleChange} />
-                <Button>Log In</Button>
-            </Form>
-        </SignInContainer>
+        <FormContainer>
+            <SignInContainer>
+                <SignInIconContainer><SignInIcon className="fas fa-user"></SignInIcon></SignInIconContainer>
+                <Title>Sign In</Title>
+                <Form action="" onSubmit={handleSubmit}>
+                    <Input type="text" name="username" placeholder="Enter your email..." value={username} onChange={handleChange} />
+                    <Input type="password" name="password" placeholder="Enter your password..." value={password} onChange={handleChange} />
+                    <Button>Log In</Button>
+                </Form>
+            </SignInContainer>
+        </FormContainer>
     )
 }
 

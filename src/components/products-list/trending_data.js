@@ -33,9 +33,9 @@ const TRENDING_DATA = [
             },
             {
               id: 5,
-              name: 'Brown Suit Jacket',
-              imageUrl: 'https://i.ibb.co/t3p958r/brown-suit-jacket.jpg',
-              price: 20
+              name: 'Red/White Air Jordan',
+              imageUrl: 'https://i.ibb.co/RPH5C5J/air-jordan.jpg',
+              price: 100
             }
           ]
         }

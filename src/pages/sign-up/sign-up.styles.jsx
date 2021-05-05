@@ -1,33 +1,78 @@
 import styled from 'styled-components';
 
+export const FormContainer = styled.div`
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+`;
+
 export const SignUpContainer = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    height: 100%;
-    margin: 20px;
+    padding: 0;
+    width: 28%;
+    margin: auto;
+    border: 2px solid #324B4E;
+`;
+
+export const SignUpIconContainer = styled.div`
+    position: absolute;
+    top: -25px;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid #324B4E;
+    border-radius: 50%;
+    background: #fff;
+`;
+
+export const SignUpIcon = styled.i`
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #324B4E;
+`; 
+
+export const Title = styled.h2`
+    color: #324B4E;
+    margin-top: 40px;
 `;
 
 export const Form = styled.form`
     display: flex;
     flex-direction: column;
+    padding: 0 20px 20px 20px;
+    width: 100%;
 `;
 
 export const Input = styled.input`
-    width: 300px;
+    width: 100%;
     height: 36px;
-    margin-bottom: 10px;
-    border-radius: 2px;
-    border: 1px solid #333;
-    padding: 6px;
+    margin: 0 auto 16px auto;
+    border: 1px solid #324B4E;
+    outline: none;
+    padding: 6px; 
 `;
 
 export const Button = styled.button`
-    width: 300px;
+    width: 100%;
     height: 36px;
-    border-radius: 2px;
-    background: #3E4756;
+    margin: 0 auto;
+    background: #324B4E;
     border: 0;
+    outline: none;
     color: #fff;
+    cursor: pointer;
+
+    &:hover{
+        background: #253c3f;
+        transition: 0.8s;
+    }
 `;

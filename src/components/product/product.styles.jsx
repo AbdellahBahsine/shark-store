@@ -11,13 +11,13 @@ export const ProductContainer = styled.div`
 export const Card = styled.div`
     position: relative;
     flex: 1;
-    height: 520px;
-    border: 2px solid #006D75;
+    
+    border: 2px solid #324B4E;
     padding: 15px;
 `;
 
 export const ImageContainer = styled.div`
-    height: 80%;
+    height: 400px;
     width: 100%;
     overflow: hidden;
 `;
@@ -48,8 +48,8 @@ export const Button = styled.button`
     width: 100%;
     height: 40px;
     background: transparent;
-    border: 2px solid #006D75;
-    color: #006D75;
+    border: 2px solid #324B4E;
+    color: #324B4E;
     cursor: pointer;
 `;
 
@@ -59,16 +59,11 @@ export const AddToCart = styled.div`
     right: 26px;
     width: 46px;
     height: 46px;
-    background-color: #006D75;
+    background-color: #324B4E;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     cursor: pointer;
-
-    &:hover{
-        opacity: .8;
-        transition: 0.6s;
-    }
 `;

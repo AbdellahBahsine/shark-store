@@ -15,6 +15,7 @@ export const Title = styled.h2`
     font-family: 'Merriweather', serif;
     font-weight: 400;
     letter-spacing: 2px;
+    margin-top: 30px;
 
     &::after{
         content: '';

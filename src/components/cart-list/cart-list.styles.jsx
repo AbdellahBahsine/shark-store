@@ -8,7 +8,7 @@ export const CartContainer = styled.div`
     height: 100vh;
     width: 400px;
     background: #fff;
-    border-left: 1px solid #333;
+    border-left: 1px solid #324B4E;
     display: flex;
     justify-content: center;
 `;
@@ -29,9 +29,15 @@ export const Button = styled.button`
     width: 375px;
     height: 40px;
     margin: 0 auto;
-    background: #3E4756;
+    background: #324B4E;
     color: #fff;
     border: 0;
-    border-radius: 5px;
+    outline: none;
     text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover{
+        background: #253c3f;
+        transition: 0.8s;
+    }
 `;

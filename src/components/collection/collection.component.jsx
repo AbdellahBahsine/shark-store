@@ -1,4 +1,4 @@
-import {Cards, Card, ImageContainer, Image, CardTitle, CardText, AddToCart} from './collection.styles';
+import {Cards, Card, ImageContainer, ContentContainer, Image, CardTitle, CardText, Button, AddToCart} from './collection.styles';
 
 const Collection = ({items, title, cartItems, handleClick, addItemToCart}) => {
 
@@ -10,8 +10,11 @@ const Collection = ({items, title, cartItems, handleClick, addItemToCart}) => {
                     return (
                     <Card>
                         <ImageContainer><Image imageUrl={item.imageUrl}></Image></ImageContainer>
-                        <CardTitle>{item.name}</CardTitle>
-                        <CardText>{item.price}</CardText>
+                        <ContentContainer>
+                            <CardTitle>{item.name}</CardTitle>
+                            <CardText>{item.price}</CardText>
+                        </ContentContainer>
+                        <Button>Add To Cart</Button>
                         <AddToCart onClick={() => handleClick(addItemToCart(cartItems, item))}><i className="fas fa-shopping-cart"></i></AddToCart>
                     </Card>
                     )

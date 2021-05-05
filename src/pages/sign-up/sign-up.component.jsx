@@ -1,4 +1,4 @@
-import {SignUpContainer, Form, Input, Button} from './sign-up.styles';
+import {FormContainer, SignUpContainer, SignUpIconContainer, SignUpIcon, Title, Form, Input, Button} from './sign-up.styles';
 
 import {useState} from 'react';
 import { auth, createUserProfileDocument } from '../../firebase/firebase';
@@ -45,16 +45,19 @@ const SignUp = () => {
     }
  
     return (
-        <SignUpContainer>
-            <h2>Sign Up</h2>
-            <Form action="" onSubmit={handleSubmit}>
-                <Input type="text" name="displayName" placeholder="Username" value={displayName} onChange={handleChange} />
-                <Input type="text" name="email" placeholder="Email" value={email} onChange={handleChange} />
-                <Input type="password" name="password" placeholder="Password" value={password} onChange={handleChange} />
-                <Input type="password" name="passwordTwo" placeholder="Re-type password" value={passwordTwo} onChange={handleChange} />
-                <Button>Register</Button>
-            </Form>
-        </SignUpContainer>
+        <FormContainer>
+            <SignUpContainer>
+                <SignUpIconContainer><SignUpIcon className="fas fa-user"></SignUpIcon></SignUpIconContainer>
+                <Title>Sign Up</Title>
+                <Form action="" onSubmit={handleSubmit}>
+                    <Input type="text" name="displayName" placeholder="Username" value={displayName} onChange={handleChange} />
+                    <Input type="text" name="email" placeholder="Email" value={email} onChange={handleChange} />
+                    <Input type="password" name="password" placeholder="Password" value={password} onChange={handleChange} />
+                    <Input type="password" name="passwordTwo" placeholder="Re-type password" value={passwordTwo} onChange={handleChange} />
+                    <Button>Register</Button>
+                </Form>
+            </SignUpContainer>
+        </FormContainer>
     )
 }
 
