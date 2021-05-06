@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 export const CartContainer = styled.div`
     position: fixed;
@@ -30,9 +31,9 @@ export const Button = styled.button`
     height: 40px;
     margin: 0 auto;
     background: #324B4E;
-    color: #fff;
     border: 0;
-    outline: none;
+    outline: 0;
+    color: #fff;
     text-transform: uppercase;
     cursor: pointer;
 

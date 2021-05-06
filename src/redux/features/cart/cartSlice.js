@@ -14,17 +14,32 @@ export const cartSlice = createSlice({
               if (existingCartItem) {
                 state.cartItems = state.cartItems.map(item =>
                     item.id === action.payload.id
-                    ? { ...item, quantity: item.quantity + 1 }
+                    ? { ...item, quantity: item.quantity + 1, totalPrice: item.totalPrice + item.price }
                     : item
                 );
               } else{
                 state.cartItems = [...state.cartItems, { ...action.payload, quantity: 1 }]
               }
-        }
+        },
+        decrement: (state, action) => {
+          const existingCartItem = state.cartItems.find(
+            item => item.id === action.payload.id
+          )
+
+          if(existingCartItem.quantity === 1){
+            state.cartItems = state.cartItems.filter(item => item.id !== action.payload.id)
+          } else{
+            state.cartItems = state.cartItems.map(item => 
+              item.id === action.payload.id
+              ? {...item, quantity: item.quantity - 1, totalPrice: item.totalPrice - item.price}
+              : item
+            )
+          }
+        } 
     }
 })
 
-export const {addToCart} = cartSlice.actions
+export const {addToCart, decrement} = cartSlice.actions
 
 export const selectCart = state => state.cart.cartItems
 
