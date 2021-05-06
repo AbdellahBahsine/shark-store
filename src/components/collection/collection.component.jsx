@@ -19,7 +19,7 @@ const Collection = ({items, title}) => {
                             <CardTitle>{item.name}</CardTitle>
                             <CardText>{item.price}</CardText>
                         </ContentContainer>
-                        <Button>Add To Cart</Button>
+                        <Button onClick={() => dispatch(addToCart(item))}>Add To Cart</Button>
                         <AddToCart onClick={() => dispatch(addToCart(item))}><i className="fas fa-shopping-cart"></i></AddToCart>
                     </Card>
                     )

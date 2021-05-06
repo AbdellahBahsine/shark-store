@@ -15,6 +15,7 @@ export const LogoContainer = styled.h2`
     font-family: 'Merriweather', serif;
     font-weight: 400;
     letter-spacing: 4px;
+    cursor: pointer;
 
     span{
         color: #94B0B3;

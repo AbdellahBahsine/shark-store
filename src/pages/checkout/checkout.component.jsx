@@ -1,21 +1,29 @@
-import {CheckoutContainer, ShoppingCart, Content, CartItemsContainer, Header, Product, Quantity, TotalPrice, CartItems, Item, ProductNameContainer, Image, ProductName, QuantityNumber, TotalPriceNumber, BackToShopping, PaymentInfo, PayemntInfoTitle, PaymentTotalPrice, Button} from './checkout.styles';
+import {CheckoutContainer, ShoppingCart, Title, Content, CartItemsContainer, Header, Product, Quantity, TotalPrice, CartItems, Item, ProductNameContainer, Image, ProductName, QuantityNumber, TotalPriceNumber, BackToShopping, PaymentInfo, PriceContainer, Note} from './checkout.styles';
+
+import StripeCheckout from 'react-stripe-checkout';
 
 import { useHistory } from "react-router-dom";
 
-import {selectCart, addToCart, decrement} from '../../redux/features/cart/cartSlice';
+import {selectTotalPrice, selectCart, addToCart, decrement} from '../../redux/features/cart/cartSlice';
 import {useSelector, useDispatch} from 'react-redux';
 
 const Checkout = () => {
 
     const cart = useSelector(selectCart)
+    const sum = useSelector(selectTotalPrice)
     const dispatch = useDispatch()
 
     const history = useHistory();
 
+    const onToken = token => {
+        console.log(token)
+        alert("Your payment is successful!")
+    }
+
     return (
         <CheckoutContainer>
             <ShoppingCart>
-                <h2>Shopping Cart</h2>
+                <Title>Shopping Cart</Title>
                 <Content>
                     <CartItemsContainer>
                         <Header>
@@ -31,7 +39,7 @@ const Checkout = () => {
                                             <Image imageUrl={item.imageUrl}></Image>
                                             <ProductName>{item.name}</ProductName>
                                         </ProductNameContainer>
-                                        <QuantityNumber><i class="fas fa-chevron-left" onClick={() => dispatch(decrement(item))}></i> <span>{item.quantity}</span> <i class="fas fa-chevron-right" onClick={() => dispatch(addToCart(item))}></i></QuantityNumber>
+                                        <QuantityNumber><i class="fas fa-minus" onClick={() => dispatch(decrement(item))}></i> <span>{item.quantity}</span> <i class="fas fa-plus" onClick={() => dispatch(addToCart(item))}></i></QuantityNumber>
                                         <TotalPriceNumber>${item.totalPrice}</TotalPriceNumber> 
                                     </Item>
                                 )
@@ -40,9 +48,14 @@ const Checkout = () => {
                         <BackToShopping onClick={() => history.push('/shop')}><i class="fas fa-arrow-left"></i> Continue Shopping</BackToShopping>
                     </CartItemsContainer>
                     <PaymentInfo>
-                            <PayemntInfoTitle>Order Summary</PayemntInfoTitle>
-                            <PaymentTotalPrice><strong>Total Price:</strong></PaymentTotalPrice>
-                            <Button>Checkout</Button>
+                            <PriceContainer><strong>Total Price:</strong> <p>${sum}</p></PriceContainer>
+                            <StripeCheckout
+                                name="Shark Store"
+                                amount={sum * 100}
+                                token={onToken}
+                                stripeKey="pk_test_51Io4WVDOWdRk19hKW95w5w0bWIN0fbXrDvtICf7ve0jZLbeVqS4Jq4emVgxoCnXLTjvAtWUMaMzpdBU6P1jNiB0s001W5MghRu"
+                            ></StripeCheckout>
+                            <Note>Use this fake card number <strong>4242424242424242</strong> and any date in the future, and random CVC number would work</Note>
                     </PaymentInfo>
                 </Content>
             </ShoppingCart>

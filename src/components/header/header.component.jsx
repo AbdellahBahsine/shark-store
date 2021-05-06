@@ -3,6 +3,8 @@ import { HeaderContainer, LogoContainer, Anchor, CartContainer, Cart } from './h
 
 import {auth} from '../../firebase/firebase';
 
+import { useHistory } from "react-router-dom";
+
 import {useSelector} from 'react-redux';
 import { selectCart } from '../../redux/features/cart/cartSlice';
 import { selectUser } from '../../redux/features/user/userSlice';
@@ -12,10 +14,12 @@ const Header = ({toggleActive}) => {
     const cart = useSelector(selectCart)
     const user = useSelector(selectUser)
 
+    const history = useHistory();
+
     return (
         <div>
             <HeaderContainer>
-                <LogoContainer>Shark <span>Store</span></LogoContainer>
+                <LogoContainer onClick={() => history.push('/')}>Shark <span>Store</span></LogoContainer>
                 <nav>
                     <Anchor to="/">Home</Anchor>
                     <Anchor to="/shop">Shop</Anchor>

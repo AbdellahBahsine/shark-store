@@ -10,6 +10,12 @@ export const ShoppingCart = styled.div`
     margin: 15px 0 40px 0;
 `;
 
+export const Title = styled.h3`
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+`;
+
 export const Content = styled.div`
     display: flex;
     width: 100%;
@@ -75,11 +81,20 @@ export const ProductName = styled.h3`
 
 export const QuantityNumber = styled.p`
     width: 25%;
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 16px;
+    display: flex;
 
     i{
         cursor: pointer;
+        background: #94B0B3;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        border-radius: 2px;
     }
 
     span{
@@ -104,18 +119,21 @@ export const BackToShopping = styled.span`
 
 export const PaymentInfo = styled.div`
     width: 30%;
+    height: 240px;
     background: #FAFAFA;
     padding: 10px 28px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
 
-export const PayemntInfoTitle = styled.h3`
-    border-bottom: 1px solid #cacaca;
-    padding-bottom: 15px;
-`;
+export const Note = styled.p`
+    color: #b33a3a;
+    text-transform: uppercase;
+`
 
-export const PaymentTotalPrice =styled.p`
-    border-top: 1px solid #cacaca;
-    padding-top: 15px;
+export const PriceContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 `;
 
 export const Button = styled.button`
