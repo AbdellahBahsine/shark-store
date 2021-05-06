@@ -2,10 +2,16 @@ import {CartListContainer, CartContainer, Button} from './cart-list.styles';
 
 import Cart from '../cart/cart.component';
 
-const CartList = ({cartItems, isActive}) => {
+import {useSelector} from 'react-redux';
+import { selectCart } from '../../redux/features/cart/cartSlice';
+
+const CartList = ({isActive}) => {
+
+    const cart = useSelector(selectCart)
+
     return (
         <CartContainer className={isActive ? "active" : null}>
-            <CartListContainer>{cartItems.map(({id, ...otherProps}) => <Cart key={id} {...otherProps} />)}</CartListContainer>
+            <CartListContainer>{cart.map(({id, ...otherProps}) => <Cart key={id} {...otherProps} />)}</CartListContainer>
             <Button>Proceed to checkout</Button>
         </CartContainer>
     )

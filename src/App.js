@@ -9,15 +9,21 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import SignUp from './pages/sign-up/sign-up.component';
 import SignIn from './pages/sign-in/sign-in.component';
+import Checkout from './pages/checkout/checkout.component';
 import Footer from './components/footer/footer.component';
 
 import {auth, createUserProfileDocument} from './firebase/firebase';
 
+import {useDispatch, useSelector} from 'react-redux';
+import {selectUser, addUser} from './redux/features/user/userSlice';
+
 const App = () => {
 
-  const [currentUser, setCurrentUser] = useState(null)
-  const [cartItems, setCartItems] = useState([]);
   const [isActive, setIsActive] = useState(false)
+
+  const user = useSelector(selectUser)
+  const dispatch = useDispatch()
+  
 
   useEffect(() => {
     let unsubscribeFromAuth = null;
@@ -27,14 +33,14 @@ const App = () => {
         const userRef = await createUserProfileDocument(userAuth)
 
         userRef.onSnapshot(snapShot => {
-          setCurrentUser({
+          dispatch(addUser({
             id: snapShot.id,
             ...snapShot.data()
-          })
+          }))
         })
       }
 
-      setCurrentUser(userAuth)
+      dispatch(addUser(userAuth))
     })
 
     return () => {
@@ -43,35 +49,20 @@ const App = () => {
 
   }, [])
 
-  const handleClick = add => {
-    setCartItems(add)
-  }
-
   const toggleActive = () => {
     setIsActive(!isActive)
 }
 
-const addItemToCart = (cartItems, newCartItem) => {
-  const existingCartItem = cartItems.find(item => item.id === newCartItem.id)
-
-  if(existingCartItem){
-      return cartItems.map(item => 
-          item.id === newCartItem.id ? {...item, quantity: item.quantity + 1} : item
-      )
-  }
-
-  return [...cartItems, {...newCartItem, quantity: 1}]
-}
-
   return (
     <div className={isActive ? "app move" : "app"}>
-      <Header currentUser={currentUser} cartItems={cartItems} toggleActive={toggleActive} />
-      <CartList cartItems={cartItems} isActive={isActive}></CartList>
+      <Header toggleActive={toggleActive} /> 
+      <CartList isActive={isActive}></CartList>
       <main>
-        <Route exact path='/' render={(props) => (<HomePage cartItems={cartItems} handleClick={handleClick} addItemToCart={addItemToCart} />)} />
-        <Route exact path='/shop' render={(props) => (<ShopPage cartItems={cartItems} handleClick={handleClick} addItemToCart={addItemToCart} />)} />
-        <Route exact path='/sign-up' render={() => currentUser ? <Redirect to='/' /> : <SignUp /> } />
-        <Route exact path='/sign-in' render={() => currentUser ? <Redirect to='/' /> : <SignIn /> } />
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/shop' component={ShopPage} />
+        <Route exact path='/sign-up' render={() => user ? <Redirect path="/" /> : <SignUp />} />
+        <Route exact path='/sign-in' render={() => user ? <Redirect path="/" /> : <SignIn />} />
+        <Route exact path='/checkout' component={Checkout} />
       </main>
       <Footer />
     </div>

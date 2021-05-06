@@ -35,14 +35,14 @@ const Hero = () => {
                 <Title className="slider__title">Welcome to Shark <Span>Store</Span></Title>
                 <Text className="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nisi, perspiciatis laudantium explicabo quidem facilis eos neque velit, minus fugiat sapiente totam officia aperiam. Expedita nemo ut repellat quisquam tempore?</Text>
             </SwiperSlide>
-            <SwiperSlide>
+            {/*<SwiperSlide>
                 <Title className="slider__title">Welcome to Shark <Span>Store</Span></Title>
                 <Text className="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nisi, perspiciatis laudantium explicabo quidem facilis eos neque velit, minus fugiat sapiente totam officia aperiam. Expedita nemo ut repellat quisquam tempore?</Text>
             </SwiperSlide>
             <SwiperSlide>
                 <Title className="slider__title">Welcome to Shark <Span>Store</Span></Title>
                 <Text className="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nisi, perspiciatis laudantium explicabo quidem facilis eos neque velit, minus fugiat sapiente totam officia aperiam. Expedita nemo ut repellat quisquam tempore?</Text>
-            </SwiperSlide>
+            </SwiperSlide>*/}
         </Swiper>
     )
 }

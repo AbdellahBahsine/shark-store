@@ -1,6 +1,11 @@
 import {Cards, Card, ImageContainer, ContentContainer, Image, CardTitle, CardText, Button, AddToCart} from './collection.styles';
 
-const Collection = ({items, title, cartItems, handleClick, addItemToCart}) => {
+import {useDispatch} from 'react-redux';
+import {addToCart} from '../../redux/features/cart/cartSlice';
+
+const Collection = ({items, title}) => {
+
+    const dispatch = useDispatch()
 
     return (
         <div className="collection">
@@ -15,7 +20,7 @@ const Collection = ({items, title, cartItems, handleClick, addItemToCart}) => {
                             <CardText>{item.price}</CardText>
                         </ContentContainer>
                         <Button>Add To Cart</Button>
-                        <AddToCart onClick={() => handleClick(addItemToCart(cartItems, item))}><i className="fas fa-shopping-cart"></i></AddToCart>
+                        <AddToCart onClick={() => dispatch(addToCart(item))}><i className="fas fa-shopping-cart"></i></AddToCart>
                     </Card>
                     )
                 })}
