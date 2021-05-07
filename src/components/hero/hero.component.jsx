@@ -14,6 +14,10 @@ const Title = styled.h2`
     font-size: 36px;
     margin: 0;
     color: #fff;
+
+    @media screen and (max-width: 678px){
+        font-size: 30px;
+    }
 `;
 
 const Span = styled.span`
@@ -23,6 +27,11 @@ const Span = styled.span`
 const Text = styled.p`
     font-size: 16px;
     width: 60%;
+
+    @media screen and (max-width: 678px){
+        font-size: 14px;
+        width: 80%;
+    }
 `;
 
 const Hero = () => {

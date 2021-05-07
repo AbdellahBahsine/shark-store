@@ -1,4 +1,6 @@
-import {CartListContainer, CartContainer, Anchor, Button} from './cart-list.styles';
+import {CartListContainer, CartContainer} from './cart-list.styles';
+
+import CustomButton from '../button/button.component';
 
 import { useHistory } from "react-router-dom";
 
@@ -16,7 +18,7 @@ const CartList = ({isActive}) => {
     return (
         <CartContainer className={isActive ? "active" : null}>
             <CartListContainer>{cart.map(({id, ...otherProps}) => <Cart key={id} {...otherProps} />)}</CartListContainer>
-            <Button onClick={() => history.push('/checkout')}>Proceed to checkout</Button>
+            <CustomButton onClick={() => history.push('/checkout')}>Proceed to checkout</CustomButton>
         </CartContainer>
     )
 }

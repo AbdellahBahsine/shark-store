@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { HeaderContainer, LogoContainer, Anchor, CartContainer, Cart } from './header.styles';
+import { MobileNav, HeaderContainer, Bars, Bar, LogoContainer, Nav, Anchor, CartContainer, Cart, CartText } from './header.styles';
 
 import {auth} from '../../firebase/firebase';
 
@@ -11,6 +11,8 @@ import { selectUser } from '../../redux/features/user/userSlice';
  
 const Header = ({toggleActive}) => {
 
+    const [active, setActive] = useState(false)
+
     const cart = useSelector(selectCart)
     const user = useSelector(selectUser)
 
@@ -19,8 +21,13 @@ const Header = ({toggleActive}) => {
     return (
         <div>
             <HeaderContainer>
+                <Bars onClick={() => setActive(!active)}>
+                    <Bar></Bar>
+                    <Bar></Bar>
+                    <Bar></Bar>
+                </Bars>
                 <LogoContainer onClick={() => history.push('/')}>Shark <span>Store</span></LogoContainer>
-                <nav>
+                <Nav>
                     <Anchor to="/">Home</Anchor>
                     <Anchor to="/shop">Shop</Anchor>
                     {
@@ -31,12 +38,24 @@ const Header = ({toggleActive}) => {
                             <Anchor to="/sign-up">Sign up</Anchor>
                         </span>
                     }
-                </nav>
+                </Nav>
                 <CartContainer>
                     <Cart className="fas fa-shopping-cart" onClick={() => toggleActive()}></Cart>
-                    Cart | {cart.length} items
+                    <CartText>Cart | {cart.length} items</CartText>
                 </CartContainer>
             </HeaderContainer>
+            <MobileNav className={active ? "open" : ""}>
+                <Anchor to="/">Home</Anchor>
+                <Anchor to="/shop">Shop</Anchor>
+                {
+                    user ?
+                    (<Anchor onClick={() => auth.signOut()}>Sign Out</Anchor>) :
+                    <span>
+                        <Anchor to="/sign-in">Sign In</Anchor>
+                        <Anchor to="/sign-up">Sign up</Anchor>
+                    </span>
+                }
+            </MobileNav>
         </div>
     )
 }

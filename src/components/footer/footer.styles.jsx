@@ -10,11 +10,21 @@ export const FooterContainer = styled.footer`
 
     @media screen and (max-width: 612px){
         flex-direction: column;
+        padding: 10px 0;
+    }
+`;
+
+export const Credit = styled.p`
+    
+
+    @media screen and (max-width: 612px){
+        order: 2;
     }
 `;
 
 export const Socials = styled.div`
     display: flex;
+    margin-top: 10px;
 `;
 
 export const Social = styled.div`

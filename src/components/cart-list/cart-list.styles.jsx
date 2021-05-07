@@ -22,10 +22,10 @@ export const CartContainer = styled.div`
         position: absolute;
         top: -100%;
         z-index: 2;
-        right: 15px !important;
-        margin-left: auto;
+        right: 5% !important;
+        margin: 0 auto;
         height: 100%;
-        width: 60%;
+        width: 90%;
         border: 1px solid #324B4E;
     }
 `;
@@ -38,22 +38,4 @@ export const CartListContainer = styled.div`
     color: black;
     overflow-y: auto;
     padding: 15px;
-`;
-
-export const Button = styled.button`
-    width: 90%;
-    height: 40px;
-    margin: 10px auto;
-    background: #324B4E;
-    border: 0;
-    outline: 0;
-    color: #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-
-    &:hover{
-        background: #253c3f;
-        transition: 0.8s;
-    }
-
 `;
