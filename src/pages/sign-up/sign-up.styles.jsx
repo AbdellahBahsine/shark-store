@@ -14,9 +14,17 @@ export const SignUpContainer = styled.div`
     justify-content: center;
     align-items:center;
     padding: 0;
-    width: 28%;
+    width: 340px;
     margin: auto;
     border: 2px solid #324B4E;
+
+    @media screen and (max-width: 1030px){
+        width: 320px;
+    }
+
+    @media screen and (max-width: 360px){
+        width: 90%;
+    }
 `;
 
 export const SignUpIconContainer = styled.div`

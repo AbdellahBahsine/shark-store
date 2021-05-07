@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { MobileNav, HeaderContainer, Bars, Bar, LogoContainer, Nav, Anchor, CartContainer, Cart, CartText } from './header.styles';
 
 import {auth} from '../../firebase/firebase';
@@ -9,9 +9,7 @@ import {useSelector} from 'react-redux';
 import { selectCart } from '../../redux/features/cart/cartSlice';
 import { selectUser } from '../../redux/features/user/userSlice';
  
-const Header = ({toggleActive}) => {
-
-    const [active, setActive] = useState(false)
+const Header = ({toggleActive, toggleOpen, isOpen}) => {
 
     const cart = useSelector(selectCart)
     const user = useSelector(selectUser)
@@ -21,7 +19,7 @@ const Header = ({toggleActive}) => {
     return (
         <div>
             <HeaderContainer>
-                <Bars onClick={() => setActive(!active)}>
+                <Bars onClick={() => toggleOpen()}>
                     <Bar></Bar>
                     <Bar></Bar>
                     <Bar></Bar>
@@ -44,7 +42,7 @@ const Header = ({toggleActive}) => {
                     <CartText>Cart | {cart.length} items</CartText>
                 </CartContainer>
             </HeaderContainer>
-            <MobileNav className={active ? "open" : ""}>
+            <MobileNav className={isOpen ? "open" : ""}>
                 <Anchor to="/">Home</Anchor>
                 <Anchor to="/shop">Shop</Anchor>
                 {

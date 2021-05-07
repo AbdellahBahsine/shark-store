@@ -20,40 +20,47 @@ import {selectUser, addUser} from './redux/features/user/userSlice';
 const App = () => {
 
   const [isActive, setIsActive] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
   const [loading, setIsLoading] = useState(true)
 
   const user = useSelector(selectUser)
   const dispatch = useDispatch()
   
 
-  useEffect(() => {
-    let unsubscribeFromAuth = null;
+useEffect(() => {
+  let unsubscribeFromAuth = null;
 
-    unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if(userAuth){
-        const userRef = await createUserProfileDocument(userAuth)
+  unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+    if(userAuth){
+      const userRef = await createUserProfileDocument(userAuth)
 
-        userRef.onSnapshot(snapShot => {
-          dispatch(addUser({
-            id: snapShot.id,
-            ...snapShot.data()
-          }))
-        })
-      }
-
-      dispatch(addUser(userAuth))
-
-      setIsLoading(false)
-    })
-
-    return () => {
-      unsubscribeFromAuth()
+      userRef.onSnapshot(snapShot => {
+        dispatch(addUser({
+          id: snapShot.id,
+          ...snapShot.data()
+        }))
+      })
     }
 
-  }, [])
+    dispatch(addUser(userAuth))
 
-  const toggleActive = () => {
-    setIsActive(!isActive)
+    setIsLoading(false)
+  })
+
+  return () => {
+    unsubscribeFromAuth()
+  }
+
+}, [])
+
+const toggleActive = () => {
+  setIsActive(!isActive)
+  setIsOpen(false)
+}
+
+const toggleOpen = () => {
+  setIsOpen(!isOpen)
+  setIsActive(false)
 }
 
   return (
@@ -63,7 +70,7 @@ const App = () => {
       <div class="container"><div class="loader"></div></div>
       :
       <div className={isActive ? "app move" : "app"}>
-      <Header toggleActive={toggleActive} /> 
+      <Header toggleActive={toggleActive} toggleOpen={toggleOpen} isOpen={isOpen} /> 
       <CartList isActive={isActive}></CartList>
       <main>
         <Route exact path='/' component={HomePage} />

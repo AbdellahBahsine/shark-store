@@ -1,13 +1,7 @@
 import React from 'react';
-import './hero.styles.css';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Pagination, Autoplay } from 'swiper';
-
-import 'swiper/swiper.scss';
-import 'swiper/components/pagination/pagination.scss';
 
 import styled from 'styled-components';
+import {HeroContainer} from './hero.styles';
 
 const Title = styled.h2`
     font-family: 'Merriweather', serif;
@@ -36,23 +30,11 @@ const Text = styled.p`
 
 const Hero = () => {
 
-    SwiperCore.use([Pagination, Autoplay ])
-
     return (
-        <Swiper slidesPerView={1} pagination={{clickable: true}} autoplay>
-            <SwiperSlide>
-                <Title className="slider__title">Welcome to Shark <Span>Store</Span></Title>
-                <Text className="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nisi, perspiciatis laudantium explicabo quidem facilis eos neque velit, minus fugiat sapiente totam officia aperiam. Expedita nemo ut repellat quisquam tempore?</Text>
-            </SwiperSlide>
-            {/*<SwiperSlide>
-                <Title className="slider__title">Welcome to Shark <Span>Store</Span></Title>
-                <Text className="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nisi, perspiciatis laudantium explicabo quidem facilis eos neque velit, minus fugiat sapiente totam officia aperiam. Expedita nemo ut repellat quisquam tempore?</Text>
-            </SwiperSlide>
-            <SwiperSlide>
-                <Title className="slider__title">Welcome to Shark <Span>Store</Span></Title>
-                <Text className="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nisi, perspiciatis laudantium explicabo quidem facilis eos neque velit, minus fugiat sapiente totam officia aperiam. Expedita nemo ut repellat quisquam tempore?</Text>
-            </SwiperSlide>*/}
-        </Swiper>
+        <HeroContainer>
+            <Title className="slider__title">Welcome to Shark <Span>Store</Span></Title>
+            <Text className="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error nisi, perspiciatis laudantium explicabo quidem facilis eos neque velit, minus fugiat sapiente totam officia aperiam. Expedita nemo ut repellat quisquam tempore?</Text>
+        </HeroContainer>
     )
 }
 

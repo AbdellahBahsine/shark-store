@@ -13,9 +13,17 @@ export const SignInContainer = styled.div`
     justify-content: center;
     align-items:center;
     padding: 10px 0;
-    width: 28%;
+    width: 350px;
     margin: 0 auto;
     border: 2px solid #324B4E;
+
+    @media screen and (max-width: 1030px){
+        width: 320px;
+    }
+
+    @media screen and (max-width: 360px){
+        width: 90%;
+    }
 `;
 
 export const SignInIconContainer = styled.div`

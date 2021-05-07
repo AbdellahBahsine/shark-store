@@ -45,6 +45,10 @@ export const Bars = styled.div`
     display: flex;
     flex-direction: column;
     cursor: pointer;
+
+    @media all and (min-width: 750px){
+        display: none;
+    }
 `;
 
 export const Bar = styled.span`
