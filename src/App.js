@@ -20,6 +20,7 @@ import {selectUser, addUser} from './redux/features/user/userSlice';
 const App = () => {
 
   const [isActive, setIsActive] = useState(false)
+  const [loading, setIsLoading] = useState(true)
 
   const user = useSelector(selectUser)
   const dispatch = useDispatch()
@@ -41,6 +42,8 @@ const App = () => {
       }
 
       dispatch(addUser(userAuth))
+
+      setIsLoading(false)
     })
 
     return () => {
@@ -54,7 +57,12 @@ const App = () => {
 }
 
   return (
-    <div className={isActive ? "app move" : "app"}>
+    <div>
+      {loading 
+      ?
+      <div class="container"><div class="loader"></div></div>
+      :
+      <div className={isActive ? "app move" : "app"}>
       <Header toggleActive={toggleActive} /> 
       <CartList isActive={isActive}></CartList>
       <main>
@@ -65,6 +73,7 @@ const App = () => {
         <Route exact path='/checkout' component={Checkout} />
       </main>
       <Footer />
+      </div>}
     </div>
   )
 }

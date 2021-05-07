@@ -18,7 +18,12 @@ export const Title = styled.h3`
 
 export const Content = styled.div`
     display: flex;
+    align-items: flex-start;
     width: 100%;
+
+    @media all and (max-width: 1080px){
+        flex-direction: column;
+    }
 `;
 
 export const CartItemsContainer = styled.div`
@@ -35,14 +40,26 @@ export const Header = styled.div`
 
 export const Product = styled.h3`
     width: 50%;
+
+    @media all and (max-width: 440px){
+        font-size: 16px;
+    }
 `;
 
 export const Quantity = styled.h3`
     width: 25%;
+
+    @media all and (max-width: 440px){
+        font-size: 16px;
+    }
 `;
 
 export const TotalPrice = styled.h3`
     width: 25%;
+
+    @media all and (max-width: 440px){
+        font-size: 16px;
+    }
 `;
 
 export const CartItems = styled.div`
@@ -70,13 +87,25 @@ export const Image = styled.div`
     background-position: center;
     border: 2px solid #3E4756;
     border-radius: 5px;
-    background-image: ${({imageUrl}) => `url(${imageUrl})`}
+    background-image: ${({imageUrl}) => `url(${imageUrl})`};
+
+    @media all and (max-width: 800px){
+        display: none;
+    }
 `;
 
 export const ProductName = styled.h3`
     font-size: 20px;
     margin-left: 15px;
     align-self: center;
+
+    @media all and (max-width: 800px){
+        margin-left: 0;
+    }
+
+    @media all and (max-width: 440px){
+        font-size: 16px;
+    }
 `;
 
 export const QuantityNumber = styled.p`
@@ -119,10 +148,15 @@ export const BackToShopping = styled.span`
 
 export const PaymentInfo = styled.div`
     width: 30%;
-    height: 240px;
+    height: auto;
     background: #FAFAFA;
     padding: 10px 28px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    @media all and (max-width: 1080px){
+        width: 100%;
+        margin-top: 30px;
+    }
 `;
 
 export const Note = styled.p`

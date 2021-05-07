@@ -6,6 +6,14 @@ export const ProductContainer = styled.div`
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 60px;
     margin: 40px 0;
+
+    @media screen and (max-width: 990px){
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media screen and (max-width: 500px){
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 `;
 
 export const Card = styled.div`

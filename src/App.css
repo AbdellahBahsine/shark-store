@@ -8,6 +8,28 @@ main{
     flex: 1;
 }
 
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    border: 6px solid #f3f3f3; 
+    border-top: 6px solid #324B4E; 
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .active{
     right: 0 !important;
     transition: 0.6s;
@@ -16,4 +38,21 @@ main{
 .move{
     margin-right: 400px;
     transition: 0.6s;
+}
+
+@media all and (max-width: 1080px){
+    .move{
+        margin-right: 300px;
+    }
+}
+
+@media all and (max-width: 750px){
+    .move{
+        margin-right: 0;
+    }
+
+    .active{
+        top: 79px !important;
+        transition: 0.6s;
+    }
 }

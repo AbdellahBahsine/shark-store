@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
 
 export const CartContainer = styled.div`
     position: fixed;
@@ -11,7 +10,24 @@ export const CartContainer = styled.div`
     background: #fff;
     border-left: 1px solid #324B4E;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    @media all and (max-width: 1080px){
+        right: -300px;
+        width: 300px;
+    }
+
+    @media all and (max-width: 750px){
+        position: absolute;
+        top: -100%;
+        z-index: 2;
+        right: 15px !important;
+        margin-left: auto;
+        height: 100%;
+        width: 60%;
+        border: 1px solid #324B4E;
+    }
 `;
 
 export const CartListContainer = styled.div`
@@ -25,11 +41,9 @@ export const CartListContainer = styled.div`
 `;
 
 export const Button = styled.button`
-    position: absolute;
-    bottom: 15px;
-    width: 375px;
+    width: 90%;
     height: 40px;
-    margin: 0 auto;
+    margin: 10px auto;
     background: #324B4E;
     border: 0;
     outline: 0;
@@ -41,4 +55,5 @@ export const Button = styled.button`
         background: #253c3f;
         transition: 0.8s;
     }
+
 `;
