@@ -18,7 +18,7 @@ const Button = styled.button`
 `;
 
 const CustomButton = ({children}) => {
-    return <button>{children}</button>
+    return <Button>{children}</Button>
 }
 
-export default Button;
+export default CustomButton;

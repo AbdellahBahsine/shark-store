@@ -51,7 +51,7 @@ useEffect(() => {
     unsubscribeFromAuth()
   }
 
-}, [])
+}, [dispatch])
 
 const toggleActive = () => {
   setIsActive(!isActive)
