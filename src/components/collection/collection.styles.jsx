@@ -18,7 +18,6 @@ export const Cards = styled.div`
 
 export const Card = styled.div`
     position: relative;
-    border: 2px solid #324B4E;
     padding: 15px;
 `;
 

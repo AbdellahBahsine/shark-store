@@ -3,43 +3,43 @@ const TRENDING_DATA = [
           items: [
             {
               id: 5,
-              name: 'Brown Suit Jacket',
-              imageUrl: 'https://i.ibb.co/t3p958r/brown-suit-jacket.jpg',
+              name: 'Gray Suit Jacket',
+              imageUrl: 'https://i.ibb.co/zX20gNz/benjamin-rascoe-Sw-Ov-GPVhdc-M-unsplash.jpg',
               price: 20,
               totalPrice: 20
             },
             {
               id: 3,
-              name: 'Long Sleeve Dress',
-              imageUrl: 'https://i.ibb.co/myC2WyS/long-sleeve.jpg',
+              name: 'Floral Skirt',
+              imageUrl: 'https://i.ibb.co/NLJ97nx/meritt-thomas-MQ9-U2-GFnn-Dc-unsplash.jpg',
               price: 25,
               totalPrice: 25
             },
             {
               id: 2,
-              name: 'Floral Spaghetti Strap',
-              imageUrl: 'https://i.ibb.co/nsVCcwN/floral-spaghetti-strap.jpg',
+              name: 'Floral Dress',
+              imageUrl: 'https://i.ibb.co/KhGSF22/ussama-azam-xg-NSlx7-Dj-YM-unsplash.jpg',
               price: 15,
               totalPrice: 15
             },
             {
               id: 11,
-              name: 'White Nike',
-              imageUrl: 'https://i.ibb.co/BjbzJJT/white-nike.jpg',
+              name: 'Black/White Nike',
+              imageUrl: 'https://i.ibb.co/XSc4kQN/usama-akram-g3-CMh2nqj-w-unsplash.jpg',
               price: 165,
               totalPrice: 165
             },
             {
               id: 6,
-              name: 'Denim Jacket',
-              imageUrl: 'https://i.ibb.co/gFjJxyj/denim-jacket.jpg',
+              name: 'Black Suit Jacket',
+              imageUrl: 'https://i.ibb.co/qpyH1KC/benjamin-rascoe-JXf2e0nb-o-unsplash.jpg',
               price: 25,
               totalPrice: 25
             },
             {
               id: 5,
-              name: 'Red/White Air Jordan',
-              imageUrl: 'https://i.ibb.co/RPH5C5J/air-jordan.jpg',
+              name: 'Gray Suit Jacket',
+              imageUrl: 'https://i.ibb.co/zX20gNz/benjamin-rascoe-Sw-Ov-GPVhdc-M-unsplash.jpg',
               price: 100,
               totalPrice: 100
             }

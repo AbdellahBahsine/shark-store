@@ -19,7 +19,6 @@ export const ProductContainer = styled.div`
 export const Card = styled.div`
     position: relative;
     flex: 1;
-    border: 2px solid #324B4E;
     padding: 15px;
 `;
 

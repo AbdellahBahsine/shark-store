@@ -6,29 +6,29 @@ const SHOP_DATA = [
       items: [
         {
           id: 1,
-          name: 'Black Spaghetti Strap',
-          imageUrl: 'https://i.imgur.com/k96LsqT.jpeg',
+          name: 'Long Sleeve Dress',
+          imageUrl: 'https://i.ibb.co/NZmj3h5/kate-skumen-PJRabku-H3-Q-unsplash.jpg',
           price: 20,
           totalPrice: 20
         },
         {
           id: 2,
-          name: 'Floral Spaghetti Strap',
-          imageUrl: 'https://i.ibb.co/nsVCcwN/floral-spaghetti-strap.jpg',
+          name: 'Floral Dress',
+          imageUrl: 'https://i.ibb.co/KhGSF22/ussama-azam-xg-NSlx7-Dj-YM-unsplash.jpg',
           price: 15,
           totalPrice: 15
         },
         {
           id: 3,
-          name: 'Long Sleeve Dress',
-          imageUrl: 'https://i.ibb.co/myC2WyS/long-sleeve.jpg',
+          name: 'Floral Skirt',
+          imageUrl: 'https://i.ibb.co/NLJ97nx/meritt-thomas-MQ9-U2-GFnn-Dc-unsplash.jpg',
           price: 25,
           totalPrice: 25
         },
         {
           id: 4,
-          name: 'Gray Spaghetti Strap',
-          imageUrl: 'https://i.imgur.com/Jxm3nC7.jpeg',
+          name: 'Long Sleeve Dress',
+          imageUrl: 'https://i.ibb.co/Bctsbxq/rodolfo-marques-0j-y7-NTky-KM-unsplash.jpg',
           price: 20,
           totalPrice: 20
         }
@@ -41,29 +41,29 @@ const SHOP_DATA = [
       items: [
         {
           id: 5,
-          name: 'Brown Suit Jacket',
-          imageUrl: 'https://i.ibb.co/t3p958r/brown-suit-jacket.jpg',
+          name: 'Gray Suit Jacket',
+          imageUrl: 'https://i.ibb.co/zX20gNz/benjamin-rascoe-Sw-Ov-GPVhdc-M-unsplash.jpg',
           price: 20,
           totalPrice: 20
         },
         {
           id: 6,
-          name: 'Denim Jacket',
-          imageUrl: 'https://i.ibb.co/gFjJxyj/denim-jacket.jpg',
+          name: 'Black Suit Jacket',
+          imageUrl: 'https://i.ibb.co/qpyH1KC/benjamin-rascoe-JXf2e0nb-o-unsplash.jpg',
           price: 25,
           totalPrice: 25
         },
         {
           id: 7,
-          name: 'Lapel Suit Jacket',
-          imageUrl: 'https://i.ibb.co/HF0ZSfs/lapel-suit-jacket.jpg',
+          name: 'Blue Suit Jacket',
+          imageUrl: 'https://i.ibb.co/GFcWxgT/benjamin-rascoe-IIp-Y8-NZYe-Ag-unsplash.jpg',
           price: 25,
           totalPrice: 25
         },
         {
           id: 8,
-          name: 'Red Suit Jacket',
-          imageUrl: 'https://i.imgur.com/YKLAFAm.jpeg',
+          name: 'Green Suit Jacket',
+          imageUrl: 'https://i.ibb.co/qnMp8gc/benjamin-rascoe-Nxtxmm-Hc2-OE-unsplash.jpg',
           price: 15,
           totalPrice: 15
         }
@@ -76,29 +76,29 @@ const SHOP_DATA = [
       items: [
         {
           id: 9,
-          name: 'Red/White Air Jordan',
-          imageUrl: 'https://i.ibb.co/RPH5C5J/air-jordan.jpg',
+          name: 'Green/White Nike',
+          imageUrl: 'https://i.ibb.co/4d7xs7C/usama-akram-k-P6kn-T7tjn4-unsplash.jpg',
           price: 100,
           totalPrice: 100
         },
         {
           id: 10,
-          name: 'Gray Nike Basketball',
-          imageUrl: 'https://i.imgur.com/g8injlA.jpeg',
+          name: 'Black/White Nike',
+          imageUrl: 'https://i.ibb.co/Y2pLSkb/usama-akram-s-g-YAb-QTo-Xk-unsplash.jpg',
           price: 90,
           totalPrice: 90
         },
         {
           id: 11,
-          name: 'Nike Air Max',
-          imageUrl: 'https://i.imgur.com/yPPEmaI.jpg',
+          name: 'Black/White Nike',
+          imageUrl: 'https://i.ibb.co/XSc4kQN/usama-akram-g3-CMh2nqj-w-unsplash.jpg',
           price: 90,
           totalPrice: 90
         },
         {
           id: 11,
-          name: 'White Nike',
-          imageUrl: 'https://i.ibb.co/BjbzJJT/white-nike.jpg',
+          name: 'Blue Nike',
+          imageUrl: 'https://i.ibb.co/L1Rkr1g/alexander-rotker-l8p1a-WZq-Hv-E-unsplash.jpg',
           price: 165,
           totalPrice: 165
         },
