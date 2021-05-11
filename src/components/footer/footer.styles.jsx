@@ -4,7 +4,7 @@ export const FooterContainer = styled.footer`
     padding: 0 5%;
     background: #006D75;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     color: #fff;
 
@@ -15,25 +15,14 @@ export const FooterContainer = styled.footer`
 `;
 
 export const Credit = styled.p`
-    
+    text-transform: uppercase;
+
+    a{
+        color: #324B4E;
+        text-decoration: none;
+    }
 
     @media screen and (max-width: 612px){
         order: 2;
     }
-`;
-
-export const Socials = styled.div`
-    display: flex;
-    margin-top: 10px;
-`;
-
-export const Social = styled.div`
-    margin-left: 20px;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #94B0B3;
-    color: #94B0B3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 `;

@@ -5,7 +5,7 @@ export const TrendingContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 60px;
-    margin: 40px 0;
+    margin-bottom: 30px;
 
     @media screen and (max-width: 990px){
         grid-template-columns: repeat(2, minmax(0, 1fr));

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const FormContainer = styled.div`
-    height: 80vh;
     display: flex;
     align-items: center;
     margin: 4px 0;
@@ -15,7 +14,8 @@ export const SignUpContainer = styled.div`
     align-items:center;
     padding: 0;
     width: 340px;
-    margin: auto;
+    height: auto;
+    margin: 40px auto;
     border: 2px solid #324B4E;
 
     @media screen and (max-width: 1030px){
