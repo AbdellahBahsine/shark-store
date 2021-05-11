@@ -2,7 +2,6 @@ const SHOP_DATA = [
     {
       id: 1,
       title: 'Women',
-      routeName: 'women',
       items: [
         {
           id: 1,
@@ -37,7 +36,6 @@ const SHOP_DATA = [
     {
       id: 2,
       title: 'Men',
-      routeName: 'men',
       items: [
         {
           id: 5,
@@ -72,7 +70,6 @@ const SHOP_DATA = [
     {
       id: 3,
       title: 'Sneakers',
-      routeName: 'sneakers ',
       items: [
         {
           id: 9,
@@ -96,7 +93,7 @@ const SHOP_DATA = [
           totalPrice: 90
         },
         {
-          id: 11,
+          id: 12,
           name: 'Blue Nike',
           imageUrl: 'https://i.ibb.co/L1Rkr1g/alexander-rotker-l8p1a-WZq-Hv-E-unsplash.jpg',
           price: 165,

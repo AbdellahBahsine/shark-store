@@ -67,7 +67,7 @@ const toggleOpen = () => {
     <div>
       {loading 
       ?
-      <div class="container"><div class="loader"></div></div>
+      <div className="container"><div className="loader"></div></div>
       :
       <div className={isActive ? "app move" : "app"}>
       <Header toggleActive={toggleActive} toggleOpen={toggleOpen} isOpen={isOpen} /> 

@@ -1,5 +1,6 @@
 const TRENDING_DATA = [
         {
+          id: 1,
           items: [
             {
               id: 5,
@@ -37,9 +38,9 @@ const TRENDING_DATA = [
               totalPrice: 25
             },
             {
-              id: 5,
-              name: 'Gray Suit Jacket',
-              imageUrl: 'https://i.ibb.co/zX20gNz/benjamin-rascoe-Sw-Ov-GPVhdc-M-unsplash.jpg',
+              id: 9,
+              name: 'Green/White Nike',
+              imageUrl: 'https://i.ibb.co/4d7xs7C/usama-akram-k-P6kn-T7tjn4-unsplash.jpg',
               price: 100,
               totalPrice: 100
             }

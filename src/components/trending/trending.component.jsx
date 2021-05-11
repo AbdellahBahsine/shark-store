@@ -10,7 +10,7 @@ const ModifiedCustomButton = styled(CustomButton)`
     width: 100%;
 `;
 
-const Product = ({items}) => {
+const Trending = ({items}) => {
 
     const dispatch = useDispatch()
 
@@ -31,4 +31,4 @@ const Product = ({items}) => {
     )
 }
 
-export default Product;
+export default Trending;

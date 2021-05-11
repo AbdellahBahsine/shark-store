@@ -1,4 +1,3 @@
-
 import SHOP_DATA from './shop_data';
 
 import Collection from '../collection/collection.component';

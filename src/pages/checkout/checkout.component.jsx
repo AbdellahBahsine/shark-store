@@ -39,13 +39,13 @@ const Checkout = () => {
                                             <Image imageUrl={item.imageUrl}></Image>
                                             <ProductName>{item.name}</ProductName>
                                         </ProductNameContainer>
-                                        <QuantityNumber><i class="fas fa-minus" onClick={() => dispatch(decrement(item))}></i> <span>{item.quantity}</span> <i class="fas fa-plus" onClick={() => dispatch(addToCart(item))}></i></QuantityNumber>
+                                        <QuantityNumber><i className="fas fa-minus" onClick={() => dispatch(decrement(item))}></i> <span>{item.quantity}</span> <i className="fas fa-plus" onClick={() => dispatch(addToCart(item))}></i></QuantityNumber>
                                         <TotalPriceNumber>${item.totalPrice}</TotalPriceNumber> 
                                     </Item>
                                 )
                             })}
                         </CartItems>
-                        <BackToShopping onClick={() => history.push('/shop')}><i class="fas fa-arrow-left"></i> Continue Shopping</BackToShopping>
+                        <BackToShopping onClick={() => history.push('/shop')}><i className="fas fa-arrow-left"></i> Continue Shopping</BackToShopping>
                     </CartItemsContainer>
                     <PaymentInfo>
                             <PriceContainer><strong>Total Price:</strong> <p>${sum}</p></PriceContainer>

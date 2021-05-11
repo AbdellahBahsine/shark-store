@@ -1,17 +1,17 @@
 import {TrendingListContainer, Title} from './trending-list.styles';
 
-import Product from '../trending/trending.component';
+import Trending from '../trending/trending.component';
 import TRENDING_DATA from './trending_data';
 
-const ProductsList = () => {
+const TrendingList = () => {
     return (
         <TrendingListContainer>
             <Title>Trending now</Title>
-            {TRENDING_DATA.map(({items}) => {
-                return (<Product items={items} />)
+            {TRENDING_DATA.map(({id, items}) => {
+                return (<Trending key={id} items={items} />)
             })}
         </TrendingListContainer>
     )
 }
 
-export default ProductsList;
+export default TrendingList;
