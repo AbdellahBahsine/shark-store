@@ -1,7 +1,14 @@
-import {Cards, Card, ImageContainer, ContentContainer, Image, CardTitle, CardText, Button, AddToCart} from './collection.styles';
+import {Cards, Card, ImageContainer, ContentContainer, Image, CardTitle, CardText, AddToCart} from './collection.styles';
 
 import {useDispatch} from 'react-redux';
 import {addToCart} from '../../redux/features/cart/cartSlice';
+
+import styled from 'styled-components';
+import CustomButton from '../button/button.component';
+
+const ModifiedCustomButton = styled(CustomButton)`
+    width: 100%;
+`;
 
 const Collection = ({items, title}) => {
 
@@ -17,9 +24,9 @@ const Collection = ({items, title}) => {
                         <ImageContainer><Image imageUrl={item.imageUrl}></Image></ImageContainer>
                         <ContentContainer>
                             <CardTitle>{item.name}</CardTitle>
-                            <CardText>{item.price}</CardText>
+                            <CardText>${item.price}</CardText>
                         </ContentContainer>
-                        <Button onClick={() => dispatch(addToCart(item))}>Add To Cart</Button>
+                        <ModifiedCustomButton onClick={() => dispatch(addToCart(item))}>Add To Cart</ModifiedCustomButton>
                         <AddToCart onClick={() => dispatch(addToCart(item))}><i className="fas fa-shopping-cart"></i></AddToCart>
                     </Card>
                     )

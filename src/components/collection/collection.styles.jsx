@@ -64,11 +64,19 @@ export const AddToCart = styled.div`
     right: 26px;
     width: 46px;
     height: 46px;
-    background-color: #324B4E;
+    border: 2px solid #324B4E;
+    background-color: transparent;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #324B4E;
     cursor: pointer;
+
+    &:hover{
+        border: 2px solid transparent;
+        background-color: #324B4E;
+        color: #fff;
+        transition: 0.6s;
+    }
 `;

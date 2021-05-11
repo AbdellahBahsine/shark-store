@@ -7,7 +7,6 @@ export const HeroContainer = styled.section`
     height: 450px;
     width: 90%;
     margin: 15px auto;
-    border: 2px solid #324B4E;
     color: #fff;
     background-image: url(${image});
     background-position: center;

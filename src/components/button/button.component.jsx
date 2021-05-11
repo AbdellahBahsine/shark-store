@@ -9,7 +9,7 @@ const Button = styled.button`
     border: none;
     outline: none;
     text-transform: uppercase;
-    cursor: pointer;
+    cursor: pointer; 
 
     &:hover{
         background: #253c3f;
@@ -17,8 +17,8 @@ const Button = styled.button`
     }
 `;
 
-const CustomButton = ({children}) => {
-    return <Button>{children}</Button>
+const CustomButton = ({children, className}) => {
+    return <Button className={className}>{children}</Button>
 }
 
 export default CustomButton;

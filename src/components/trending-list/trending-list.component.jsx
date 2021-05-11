@@ -1,16 +1,16 @@
-import {ProductsListContainer, Title} from './products-list.styles';
+import {TrendingListContainer, Title} from './trending-list.styles';
 
-import Product from '../product/product.component';
+import Product from '../trending/trending.component';
 import TRENDING_DATA from './trending_data';
 
 const ProductsList = () => {
     return (
-        <ProductsListContainer>
+        <TrendingListContainer>
             <Title>Trending now</Title>
             {TRENDING_DATA.map(({items}) => {
                 return (<Product items={items} />)
             })}
-        </ProductsListContainer>
+        </TrendingListContainer>
     )
 }
 

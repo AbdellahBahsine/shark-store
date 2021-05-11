@@ -1,7 +1,7 @@
 import './homepage.styles';
 
 import Hero from '../../components/hero/hero.component';
-import ProductsList from '../../components/products-list/products-list.component';
+import ProductsList from '../../components/trending-list/trending-list.component';
 
 const HomePage = () => {
     return (

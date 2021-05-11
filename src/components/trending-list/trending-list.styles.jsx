@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ProductsListContainer = styled.div`
+export const TrendingListContainer = styled.div`
     padding: 0 5%;
     display: flex;
     flex-direction: column;

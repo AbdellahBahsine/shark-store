@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ProductContainer = styled.div`
+export const TrendingContainer = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -50,26 +50,25 @@ export const CardText = styled.p`
     font-weight: 200;
 `;
 
-export const Button = styled.button`
-    width: 100%;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #324B4E;
-    color: #324B4E;
-    cursor: pointer;
-`;
-
 export const AddToCart = styled.div`
     position: absolute;
     top: 26px;
     right: 26px;
     width: 46px;
     height: 46px;
-    background-color: #324B4E;
+    border: 2px solid #324B4E;
+    background-color: transparent;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #324B4E;
     cursor: pointer;
+
+    &:hover{
+        border: 2px solid transparent;
+        background-color: #324B4E;
+        color: #fff;
+        transition: 0.6s;
+    }
 `;
