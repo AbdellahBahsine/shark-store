@@ -24,10 +24,15 @@ export const MobileNav = styled.nav`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+
 
     &.open{
         width: 100%;
-        transition: 0.6s;
+        opacity: 1;
+        pointer-events: auto;
+        transition: width 0.6s;
     }
 
     a{

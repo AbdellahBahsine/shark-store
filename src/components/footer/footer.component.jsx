@@ -1,4 +1,4 @@
-import {FooterContainer, Credit, Socials, Social} from './footer.styles';
+import {FooterContainer, Credit} from './footer.styles';
 
 const Footer = () => {
     return (
