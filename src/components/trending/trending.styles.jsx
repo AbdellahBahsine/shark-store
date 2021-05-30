@@ -19,7 +19,7 @@ export const TrendingContainer = styled.div`
 export const Card = styled.div`
     position: relative;
     flex: 1;
-    padding: 15px;
+    padding: 15px 0;
 `;
 
 export const ImageContainer = styled.div`

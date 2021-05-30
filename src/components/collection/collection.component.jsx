@@ -1,4 +1,4 @@
-import {Cards, Card, ImageContainer, ContentContainer, Image, CardTitle, CardText, AddToCart} from './collection.styles';
+import {Title, Cards, Card, ImageContainer, ContentContainer, Image, CardTitle, CardText, AddToCart} from './collection.styles';
 
 import {useDispatch} from 'react-redux';
 import {addToCart} from '../../redux/features/cart/cartSlice';
@@ -16,7 +16,7 @@ const Collection = ({items, title}) => {
 
     return (
         <div className="collection">
-            <h2>{title}</h2>
+            <Title>{title}</Title> 
             <Cards>
                 {items.map(item => {
                     return (

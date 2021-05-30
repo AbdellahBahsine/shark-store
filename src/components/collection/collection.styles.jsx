@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const Title = styled.h2`
+    padding: 15px 0;
+    border-top: 2px solid #324B4E;
+    border-bottom: 2px solid #324B4E;
+`;
+
 export const Cards = styled.div`
     width: 100%;
     display: grid;
@@ -18,7 +24,7 @@ export const Cards = styled.div`
 
 export const Card = styled.div`
     position: relative;
-    padding: 15px;
+    padding: 15px 0;
 `;
 
 export const ImageContainer = styled.div`
